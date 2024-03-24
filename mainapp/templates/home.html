@@ -5,10 +5,16 @@
 
 {% block content %}
 
-<div class="container w-75">
+<div class="container w-100 p-0">
     {{ carte_html|safe }}
-    </div>
-<form >
-<input type="radio">
-</form>
+<!-- <a href="{% url 'home' %}"> -->
+    <br>
+    <center>
+        <p>Choisissez une algorithme</p>
+    <a class="btn btn-primary" href="{% url 'aproximation' %}">Approximation</a>
+    <a class="btn btn-primary" href="">ACO</a>
+    </center>
+</div>
+
+
 {% endblock content %}

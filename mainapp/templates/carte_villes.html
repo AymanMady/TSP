@@ -4,9 +4,14 @@
 <!-- {{result}} -->
 
 {% block content %}
+
 <div class="container w-75">
-{{ carte_html|safe }}
+    {{ carte_html|safe }}
+</div>
+
+<div class="text-center mt-4">
+        <i class="mdi mdi-map-marker mdi-36px text-success "></i>Point de départ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="mdi mdi-map-marker mdi-36px text-danger me-4"></i> Point d'arrêt
 </div>
 
 {% endblock content %}
-
