@@ -11,6 +11,8 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 import plotly.io as pio
 
+
+
 def dijkstra(graph, start):
     distances = {vertex: sys.maxsize for vertex in graph}
     distances[start] = 0
@@ -31,6 +33,12 @@ def dijkstra(graph, start):
 
     return distances
 
+
+
+
+
+
+
 def calculer_plus_court_chemin(villes):
     graph = {ville["Ville"]: {} for ville in villes}
 
@@ -47,6 +55,10 @@ def calculer_plus_court_chemin(villes):
     villes_triees = sorted(villes, key=lambda x: distances[x["Ville"]])
     print (distance)
     return villes_triees
+
+
+
+
 
 
 
@@ -105,6 +117,9 @@ def aproximation(request):
     carte_html = carte._repr_html_()
 
     return render(request, "carte_villes.html", {"carte_html": carte_html})
+
+
+
 
 
 
