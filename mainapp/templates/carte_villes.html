@@ -7,7 +7,9 @@
     <title>Carte des villes</title>
 </head>
 <body>
-    
+    {% for i in tsp_path %}
+    <p>{{i}}</p>
+    {% endfor %}
     <h1>Carte des villes</h1>
     {{ carte_html|safe }}
 </body>

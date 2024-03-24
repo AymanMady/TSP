@@ -6,5 +6,4 @@ urlpatterns = [
     path('resultat/',views.resultat,name="resultat"),
     path('importation/',views.importation,name="importation"),
     path('',views.afficher_carte,name="afficher_carte"),
-
 ]
