@@ -85,16 +85,63 @@
       <!-- partiel:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'home' %}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Tableau de bord</span>
             </a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'importation' %}">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Uploader le fichier Excel</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Données' %}">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Visualiser les données </span>
+            </a>
+          </li>
         </ul>
       </nav>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="row">
+              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                      {% block content %}
+                      {% endblock %}
+
+                    </div>
+                  </div>
+              </div>
+        </div>
+
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Droits d'auteur © 2024 SupNum
+        </div>
+
+      </footer> 
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>  
       <!-- partiel -->
-      {% block content %}{% endblock %}
 
       <!-- main-panel ends -->
     </div>   

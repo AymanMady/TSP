@@ -1,14 +1,14 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sin Function Animation</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
+{% extends 'navbar.html' %}
+{% load static %}
+
+<!-- {{result}} -->
+
+{% block content %}
+
+
     <div id="pltly-graph">{{ graph|safe }}</div>
     <script>
         var graph = '';
         document.getElementById('plotly-graph').innerHTML = graph;
     </script>
-</body>
-</html>
+{% endblock content %}
