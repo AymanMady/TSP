@@ -5,8 +5,10 @@ from . import views
 urlpatterns = [
     path('resultat/',views.resultat,name="resultat"),
     path('importation/',views.importation,name="importation"),
-    path('',views.afficher_carte,name="afficher_carte"),
+    path('',views.afficher_tout_posubilite,name="afficher_tout_posubilite"),
     path('home',views.home,name="home"),
     path('Données',views.visialiserLeDonner,name="Données"),
+    path('afficher_tout_posubilite',views.afficher_tout_posubilite,name="afficher_tout_posubilite"),
+    path('aproximation',views.aproximation,name="aproximation"),
 
 ]
