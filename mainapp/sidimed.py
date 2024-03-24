@@ -97,7 +97,7 @@ def affiche_algorithme_approximation(request):
 
     return render(request, "carte_villes.html", {"carte_html": carte_html})
 
-def ant_colony_optimization(graph, num_ants=400, num_iterations=100, evaporation_rate=0.5, alpha=1, beta=2):
+def ant_colony_optimization(graph, num_ants=100, num_iterations=100, evaporation_rate=0.5, alpha=1, beta=2):
     num_cities = len(graph)
     pheromone = [[1] * num_cities for _ in range(num_cities)]
     best_path = None
