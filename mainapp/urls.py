@@ -8,6 +8,6 @@ urlpatterns = [
     path('importation/',views.importation,name="importation"),
     path('home',views.home,name="home"),
     path('Données',views.visialiserLeDonner,name="Données"),
-    path('aproximation',views.aproximation,name="aproximation"),
-
+    path('approx',views.affiche_algorithme_approximation,name="approx"),
+    path('ant',views.affiche_algorithme_ant,name="ant"),
 ]
