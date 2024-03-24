@@ -58,3 +58,4 @@ def resultat(request):
         return path
     result = nearest_neighbor_tsp(coords)
     return render(request,"index.html",{'result':result})
+from .sidimed import *
