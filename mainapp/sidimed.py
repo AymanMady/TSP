@@ -63,13 +63,10 @@ def afficher_carte(request):
         {"nom": "Rosso", "latitude": 16.6264755333439, "longitude": -15.6941505288147}
     ]
 
-    # Calculer le plus court chemin
     villes_ordonnees = calculer_plus_court_chemin(villes)
 
-    # Créer une carte centrée sur la premier ville
     carte = folium.Map(location=[villes[0]["latitude"], villes[0]["longitude"]], zoom_start=6)
 
-    # Ajouter un marqueur pour chaque ville
     for ville in villes:
         nom = ville["nom"]
         latitude = ville["latitude"]
@@ -81,13 +78,35 @@ def afficher_carte(request):
             popup=nom,
             icon=folium.Icon(color="blue", icon="info-sign")
         ).add_to(carte)
+        
+    
 
     # Ajouter les lignes reliant chaque paire de villes dans l'ordre du plus court chemin
+    premiere_ville=villes_ordonnees[0]
     for i in range(len(villes_ordonnees) - 1):
+        
         ville1 = villes_ordonnees[i]
         ville2 = villes_ordonnees[i + 1]
         folium.PolyLine(locations=[(ville1["latitude"], ville1["longitude"]), (ville2["latitude"], ville2["longitude"])], color='green').add_to(carte)
+    
+    folium.PolyLine(locations=[(ville2["latitude"], ville2["longitude"]), (premiere_ville["latitude"], premiere_ville["longitude"])], color='green').add_to(carte)
 
+    derniere_ville = villes_ordonnees[-1]
+
+    # Ajouter un marqueur rouge pour la dernière ville
+    folium.Marker(
+        location=[derniere_ville["latitude"], derniere_ville["longitude"]],
+        popup=derniere_ville["nom"],
+        icon=folium.Icon(color="red", icon="info-sign")
+    ).add_to(carte)
+    
+    
+    folium.Marker(
+        location=[premiere_ville["latitude"], premiere_ville["longitude"]],
+        popup=premiere_ville["nom"],
+        icon=folium.Icon(color="green", icon="info-sign")
+    ).add_to(carte)
+    
     # Convertir la carte Folium en HTML
     carte_html = carte._repr_html_()
     request.session['file'] = 'my_value'
