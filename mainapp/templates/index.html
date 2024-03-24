@@ -1,1 +1,69 @@
-{{result}}
+{% extends 'navbar.html' %}
+{% load static %}
+
+<!-- {{result}} -->
+
+{% block content %}
+
+
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="row">
+              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <h3 class="font-weight-bold">Tableau de bord</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                      <form class="forms-sample">
+                        <div class="form-group">
+                          <label for="exampleInputUsername1">Fichier Excel</label>
+                          <input type="file" class="form-control "  placeholder="Télécharger l'image">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Ville de départ</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ville de départ">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">La méthode</label>
+                            <select name="methode" class="form-control" id="">
+                                <option value="Algorithme d’approximation">Algorithme d’approximation</option>
+                                <option value="Algorithme de colonie de fourmis (Ant Colony Optimization : ACO)">Algorithme de colonie de fourmis (Ant Colony Optimization : ACO)</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Mougataas / Wilayas</label>
+                            <select name="methode" class="form-control" id="">
+                                <option value="mougataa">Mougataas</option>
+                                <option value="wilaya">Wilayas</option>
+                            </select>
+                          </div>
+                        <button type="submit" class="btn btn-primary mr-2">Soumettre</button>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+        </div>
+
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Droits d'auteur © 2024 SupNum
+        </div>
+
+      </footer> 
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>  
+
+{% endblock content %}
