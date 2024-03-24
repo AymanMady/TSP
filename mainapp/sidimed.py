@@ -52,7 +52,7 @@ def afficher_carte(request):
     try:
         df = pd.read_excel(fichier_excel)
     except Exception as e:
-        return render(request, "erreur.html", {"message": str(e)})  # Gérer les erreurs de lecture du fichier
+        return render(request, "importation.html", {"message": "il faut importer un fichier excel"})  # Gérer les erreurs de lecture du fichier
 
     villes = df.to_dict('records')
     
