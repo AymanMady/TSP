@@ -4,12 +4,22 @@
 <!-- {{result}} -->
 
 {% block content %}
-<table>
-    <tr><th>ville </th><th>coordinates</th></tr>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+<div class="table-responsive">
+
+<table class="table">
+    <tr style="padding: 3px;"><th>ville </th><th>coordinates</th></tr>
 
 {% for city, coordinates in data.items %}
-<tr><td>{{ city }} </td> <td>{{coordinates}}</td></tr>
+<tr class="padding:3px"><td>{{ city }} </td> <td>{{coordinates}}</td></tr>
 {% endfor %}
 </table>
+</div>
+</div>
+</div>
+</div>
+
 
 {% endblock content %}

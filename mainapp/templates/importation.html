@@ -4,7 +4,45 @@
 <!-- {{result}} -->
 
 {% block content %}
-<div>{{message}}</div>
+{% if message %}
+<div id="message" class="alert alert-danger" style="display: none; position: relative;">
+  <span class="close-btn" onclick="closeMessage()">x</span>
+  <!-- Votre message de danger ici -->
+  {{message}}
+</div>
+
+<script>
+  // Afficher le message de danger
+  document.getElementById('message').style.display = 'block';
+
+  // Fonction pour fermer le message
+  function closeMessage() {
+      document.getElementById('message').style.display = 'none';
+  }
+</script>
+
+<style>
+  /* Style du bouton de fermeture */
+  .close-btn {
+      position: absolute;
+      top: 0;
+      left: -20px; /* Ajuster la position à gauche */
+      cursor: pointer;
+      font-weight: bold;
+  }
+</style>
+
+{% endif %}
+
+<script>
+  // Afficher le message de danger
+  document.getElementById('message').style.display = 'block';
+
+  // Disparaître après quelques secondes (par exemple, 5 secondes)
+  setTimeout(function() {
+      document.getElementById('message').style.display = 'none';
+  }, 1500); // 5000 millisecondes = 5 secondes
+</script>
 
 
                       <form class="forms-sample" method="post" action="{% url 'importation' %}" enctype="multipart/form-data">

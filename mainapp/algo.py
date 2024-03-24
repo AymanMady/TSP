@@ -13,11 +13,20 @@ import numpy as np
 from django.shortcuts import render
 
 # Function to convert the excel file to a dictionary
+import openpyxl
+import re
+
 def excel_to_dict(file_path):
     try:
         # Load the workbook and select the first worksheet
         wb = openpyxl.load_workbook(file_path)
         ws = wb.active
+
+        # Check if the headers are correct
+        headers = [cell.value.strip() for cell in ws[1]]
+
+        if headers != ["Ville", "Latitude", "Longitude"]:
+            raise ValueError("Les en-têtes des colonnes ne correspondent pas au format attendu.")
 
         # Initialize an empty dictionary
         city_coords = {}
@@ -38,19 +47,15 @@ def excel_to_dict(file_path):
 
         return city_coords
     except Exception as e:
-        # Handle any exceptions that occur during file reading
-        print("An error occurred while reading the Excel file:", str(e))
-        return None
+        return render('importation.html', {'message': "Une erreur s'est produite lors de la lecture du fichier Excel. Il faut importer un fichier Excel."})
+
+
 # View function to visualize the data
 # View function to visualize the data
 def visialiserLeDonner(request):
     try:
         coord = excel_to_dict('files/data.xlsx') 
-        if coord is None:
-            return render(request, 'importation.html', {'message': "Erreur lors de la lecture du fichier Excel. Assurez-vous que le fichier est correctement formaté."})
     except Exception as e:
-        # Handle any exceptions that occur during file reading
-        print("An error occurred:", str(e))
         return render(request, 'importation.html', {'message': "Une erreur s'est produite lors de la lecture du fichier Excel. Il faut importer un fichier Excel."})
 
     return render(request, 'selectdata.html', {'data': coord})
