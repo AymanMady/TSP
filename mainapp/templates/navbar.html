@@ -9,12 +9,8 @@
   <!-- plugins:css -->
   <link rel="stylesheet" href="{% static 'vendors/feather/feather.css' %}">
   <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
-  <!-- <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}"> -->
   <!-- endinject -->
   <!-- Plugin css pour cette page -->
-  <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'js/select.dataTables.min.css' %}">
   <!-- Fin plugin css pour cette page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.css' %}">
@@ -68,7 +64,7 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partiel:partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
-        <!-- <div id="settings-trigger"><i class="ti-settings"></i></div> -->
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close ti-close"></i>
           <p class="settings-heading">SKINS DE LA BARRE LATÉRALE</p>
@@ -89,7 +85,7 @@
       <!-- partiel:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="{% url 'home' %}">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Tableau de bord</span>
@@ -152,21 +148,3 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-
-  <!-- plugins:js -->
-  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
-  <!-- endinject -->
-  <!-- Plugin js pour cette page -->
-  <script src="{% static 'js/dataTables.select.min.js' %}"></script>
-
-  <!-- Fin plugin js pour cette page -->
-  <!-- inject:js -->
-  <script src="{% static 'js/off-canvas.js' %}"></script>
-  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
-  <script src="{% static 'js/template.js' %}"></script>
-  <script src="{% static 'js/settings.js' %}"></script>
-  <script src="{% static 'js/todolist.js' %}"></script>
-  <!-- endinject -->
-  <!-- Custom js pour cette page-->
-  <script src="{% static 'js/dashboard.js' %}"></script>
-  <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>
