@@ -4,10 +4,10 @@
 <!-- {{result}} -->
 
 {% block content %}
+<div>{{message}}</div>
 
 
-
-                      <form class="forms-sample" method="post" enctype="multipart/form-data">
+                      <form class="forms-sample" method="post" action="{% url 'importation' %}" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="form-group">

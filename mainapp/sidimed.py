@@ -50,7 +50,11 @@ def afficher_carte(request):
     fichier_excel = 'files/data.xlsx'
     
     try:
-        df = pd.read_excel(fichier_excel)
+        
+        columns_to_read = ['Ville', 'Latitude', 'Longitude']
+
+# Read the Excel file with specified columns
+        df = pd.read_excel(fichier_excel, usecols=columns_to_read)
     except Exception as e:
         return render(request, "importation.html", {"message": "il faut importer un fichier excel"})  # Gérer les erreurs de lecture du fichier
 
