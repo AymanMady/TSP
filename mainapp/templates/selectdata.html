@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+<!-- {{result}} -->
+
+{% block content %}
+<table>
+    <tr><th>ville </th><th>coordinates</th></tr>
+
+{% for city, coordinates in data.items %}
+<tr><td>{{ city }} </td> <td>{{coordinates}}</td></tr>
+{% endfor %}
+</table>
+
+{% endblock content %}
