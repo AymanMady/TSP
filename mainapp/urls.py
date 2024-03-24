@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('',views.resultat,name="resultat"),
+    path('',views.afficher_carte,name="afficher_carte"),
 
 ]
