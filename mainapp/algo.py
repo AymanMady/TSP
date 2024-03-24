@@ -6,10 +6,15 @@ import numpy as np
 from django.shortcuts import render
 
 
+try :
+    file_path = 'files/data.xlsx'
+except:
+    file_path = ''
 
 # Function to convert the excel file to a dictionary
 def excel_to_dict(file_path):
     # Load the workbook and select the first worksheet
+    
     wb = openpyxl.load_workbook(file_path)
     ws = wb.active
 
@@ -31,8 +36,7 @@ def excel_to_dict(file_path):
 
     return city_coords
 
-# Since the file was already uploaded, set the path to the uploaded file
-file_path = 'files/data.xlsx'
+
 
 # Convert the Excel file to a dictionary
 coords = excel_to_dict(file_path)

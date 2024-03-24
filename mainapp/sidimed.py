@@ -90,5 +90,17 @@ def afficher_carte(request):
 
     # Convertir la carte Folium en HTML
     carte_html = carte._repr_html_()
+    request.session['file'] = 'my_value'
+
+    # Save session data explicitly (optional)
+    request.session.save()
+
+    # Access session data
+    my_value = request.session.get('file')
+    try :
+        path='files/data.xlsx'
+    except:
+        request.session['file']='test'
+
 
     return render(request, "carte_villes.html", {"carte_html": carte_html})

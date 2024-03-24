@@ -7,9 +7,11 @@ from django.core.files.storage import default_storage
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from .algo import *
-
+# from django.shortcuts import session
 
 def home(request):
+    
+    
     return redirect(afficher_carte)
 
 def resultat(request):
