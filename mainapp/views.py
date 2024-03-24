@@ -9,7 +9,8 @@ from django.core.files.storage import FileSystemStorage
 
 
 
-
+def index(request):
+    return render(request,'index.html')
 
 def resultat(request):
     coords = {
