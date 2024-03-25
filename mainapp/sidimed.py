@@ -31,6 +31,9 @@ def dijkstra(graph, start):
 
     return distances
 
+
+
+
 def calculer_plus_court_chemin(villes):
     graph = {ville["Ville"]: {} for ville in villes}
 
