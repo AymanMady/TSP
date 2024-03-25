@@ -5,6 +5,11 @@ import heapq
 import sys
 import math
 import pandas as pd
+import math
+
+import plotly.offline as pyo
+import plotly.graph_objs as go
+import plotly.io as pio
 
 def dijkstra(graph, start):
     distances = {vertex: sys.maxsize for vertex in graph}
@@ -25,7 +30,6 @@ def dijkstra(graph, start):
                 heapq.heappush(priority_queue, (distance, neighbor))
 
     return distances
-import math
 
 def calculer_plus_court_chemin(villes):
     graph = {ville["Ville"]: {} for ville in villes}
@@ -41,12 +45,13 @@ def calculer_plus_court_chemin(villes):
     distances = dijkstra(graph, start_ville)
 
     villes_triees = sorted(villes, key=lambda x: distances[x["Ville"]])
-
+    print (distance)
     return villes_triees
 
 
 
-def afficher_carte(request):
+def aproximation(request):
+
     fichier_excel = 'files/data.xlsx'
     
     try:
@@ -101,16 +106,7 @@ def afficher_carte(request):
 
     return render(request, "carte_villes.html", {"carte_html": carte_html})
 
-import plotly.offline as pyo
-import plotly.graph_objs as go
-import pandas as pd
-from django.shortcuts import render
 
-
-
-import plotly.graph_objs as go
-import plotly.io as pio
-import itertools
 
 def afficher_arbre(data):
     # Create nodes
