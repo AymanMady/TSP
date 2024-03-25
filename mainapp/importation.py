@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import networkx as nx
 from geopy.distance import geodesic
 # from .graph import *
@@ -7,7 +7,7 @@ from django.core.files.storage import default_storage
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 import openpyxl
-
+from  .views import *
 def importation(request):
     if request.method == "POST" and request.FILES["excel_file"]:
         excel_file = request.FILES["excel_file"]
@@ -22,7 +22,7 @@ def importation(request):
         fs = FileSystemStorage()
         filename = fs.save("files/data.xlsx", excel_file)
         uploaded_file_url = fs.url(filename)
-        return render(request, "importation.html", {"uploaded_file_url": uploaded_file_url})
+        return redirect('home')
     return render(request, "importation.html")
 
 

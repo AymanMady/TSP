@@ -10,9 +10,7 @@ from .algo import *
 # from django.shortcuts import session
 
 def home(request):
-    
-    
-    return redirect(afficher_carte)
+    return redirect(afficher_tout_posubilite)
 
 def resultat(request):
     coords = {

@@ -1,0 +1,106 @@
+digraph {
+	"Aïoun" [label="Aïoun
+(16.8366893287323, -9.27583480330441)"]
+	Akjoujt [label="Akjoujt
+(19.9420143167071, -14.6440193516613)"]
+	Aleg [label="Aleg
+(17.1728009990846, -13.9023810848904)"]
+	Atar [label="Atar
+(20.6190971368345, -13.4188043441809)"]
+	"Kaédi" [label="Kaédi
+(16.0455219912174, -13.1873050779235)"]
+	Kiffa [label="Kiffa
+(16.678771880566, -11.4111923888962)"]
+	"Néma" [label="Néma
+(16.3926143684381, -7.34328812930029)"]
+	Nouadhibou [label="Nouadhibou
+(21.0200766331283, -15.9151199295992)"]
+	Nouakchott [label="Nouakchott
+(18.0783994226296, -15.885155269477)"]
+	Rosso [label="Rosso
+(16.6264755333439, -15.6941505288147)"]
+	"Sélibaby" [label="Sélibaby
+(15.4729996284158, -12.1965786387684)"]
+	Tidjikja [label="Tidjikja
+(18.6315729894793, -11.5524434053275)"]
+	Zoueratt [label="Zoueratt
+(23.4958870003132, -10.1376367144798)"]
+	"Aïoun" -> Akjoujt
+	"Aïoun" -> Aleg
+	"Aïoun" -> Atar
+	"Aïoun" -> "Kaédi"
+	"Aïoun" -> Kiffa
+	"Aïoun" -> "Néma"
+	"Aïoun" -> Nouadhibou
+	"Aïoun" -> Nouakchott
+	"Aïoun" -> Rosso
+	"Aïoun" -> "Sélibaby"
+	"Aïoun" -> Tidjikja
+	"Aïoun" -> Zoueratt
+	Akjoujt -> Aleg
+	Akjoujt -> Atar
+	Akjoujt -> "Kaédi"
+	Akjoujt -> Kiffa
+	Akjoujt -> "Néma"
+	Akjoujt -> Nouadhibou
+	Akjoujt -> Nouakchott
+	Akjoujt -> Rosso
+	Akjoujt -> "Sélibaby"
+	Akjoujt -> Tidjikja
+	Akjoujt -> Zoueratt
+	Aleg -> Atar
+	Aleg -> "Kaédi"
+	Aleg -> Kiffa
+	Aleg -> "Néma"
+	Aleg -> Nouadhibou
+	Aleg -> Nouakchott
+	Aleg -> Rosso
+	Aleg -> "Sélibaby"
+	Aleg -> Tidjikja
+	Aleg -> Zoueratt
+	Atar -> "Kaédi"
+	Atar -> Kiffa
+	Atar -> "Néma"
+	Atar -> Nouadhibou
+	Atar -> Nouakchott
+	Atar -> Rosso
+	Atar -> "Sélibaby"
+	Atar -> Tidjikja
+	Atar -> Zoueratt
+	"Kaédi" -> Kiffa
+	"Kaédi" -> "Néma"
+	"Kaédi" -> Nouadhibou
+	"Kaédi" -> Nouakchott
+	"Kaédi" -> Rosso
+	"Kaédi" -> "Sélibaby"
+	"Kaédi" -> Tidjikja
+	"Kaédi" -> Zoueratt
+	Kiffa -> "Néma"
+	Kiffa -> Nouadhibou
+	Kiffa -> Nouakchott
+	Kiffa -> Rosso
+	Kiffa -> "Sélibaby"
+	Kiffa -> Tidjikja
+	Kiffa -> Zoueratt
+	"Néma" -> Nouadhibou
+	"Néma" -> Nouakchott
+	"Néma" -> Rosso
+	"Néma" -> "Sélibaby"
+	"Néma" -> Tidjikja
+	"Néma" -> Zoueratt
+	Nouadhibou -> Nouakchott
+	Nouadhibou -> Rosso
+	Nouadhibou -> "Sélibaby"
+	Nouadhibou -> Tidjikja
+	Nouadhibou -> Zoueratt
+	Nouakchott -> Rosso
+	Nouakchott -> "Sélibaby"
+	Nouakchott -> Tidjikja
+	Nouakchott -> Zoueratt
+	Rosso -> "Sélibaby"
+	Rosso -> Tidjikja
+	Rosso -> Zoueratt
+	"Sélibaby" -> Tidjikja
+	"Sélibaby" -> Zoueratt
+	Tidjikja -> Zoueratt
+}
