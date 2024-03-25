@@ -91,11 +91,13 @@ def affiche_algorithme_approximation(request):
         location=[premiere_ville["Latitude"], premiere_ville["Longitude"]],
         popup=premiere_ville["Ville"],
         icon=folium.Icon(color="green", icon="info-sign")
+        
     ).add_to(carte)
 
     carte_html = carte._repr_html_()
 
     return render(request, "carte_villes.html", {"carte_html": carte_html})
+
 
 def ant_colony_optimization(graph, num_ants=100, num_iterations=100, evaporation_rate=0.5, alpha=1, beta=2):
     num_cities = len(graph)

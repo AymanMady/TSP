@@ -44,7 +44,11 @@
   }, 1500); // 5000 millisecondes = 5 secondes
 </script>
 
-
+<div>              
+  <p>Le format de fichier doit être le même que celui indiqué dans l'image, sinon les algorithmes ne fonctionneront pas</p>
+  <img src="{% static 'format.png' %}"style="width: 700px;height: 100px;" alt="profile"/>
+</div>
+<br>
                       <form class="forms-sample" method="post" action="{% url 'importation' %}" enctype="multipart/form-data">
                         {% csrf_token %}
 
