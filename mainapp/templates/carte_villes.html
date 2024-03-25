@@ -4,8 +4,10 @@
 <!-- {{result}} -->
 
 {% block content %}
-
+<a class="btn btn-primary"  href="{% url 'anim' %}">  afficher avec animation</a>
+<br>
 <div class="container w-75">
+    
     {{ carte_html|safe }}
 </div>
 

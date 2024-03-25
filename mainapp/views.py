@@ -9,7 +9,7 @@ from django.core.files.storage import FileSystemStorage
 from .algo import *
 from .sidimed import *
 # from django.shortcuts import session
-
+from .graphAvecAnim import *
 def home(request):
     return redirect(afficher_tout_posubilite)
 
